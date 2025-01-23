@@ -5,12 +5,12 @@
 
 html{
     width: 100vw;
-    height: 100vh;
+    height: 95vh;
 }
 body{
     background: url(images.png);
     width: 100vw;
-    height: 100vh;
+    height: 95vh;
     position: absolute;
     box-sizing: border-box;
 }
@@ -74,7 +74,7 @@ body{
 @media (min-width:250px) and (max-width:700px) {
     .gif{
         position: absolute;
-        bottom: 0!important;
+        bottom: 5%!important;
         left:22%;
         }
         .gif img{
@@ -84,14 +84,14 @@ body{
             font-size: 1rem;
         }
     .question{
-        margin-top:5%;
+        margin-top:0%;
     }
 }
 #container {
     position: absolute;
     text-align: center;
     width: 100vw;
-    height: 100vh;
+    height: 95vh;
     padding: 0;
     margin: 0;
   }
