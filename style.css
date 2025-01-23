@@ -71,7 +71,7 @@ body{
     color:white;
 }
 
-@media (min-width:300px) and (max-width:391px) {
+@media (min-width:200px) and (max-width:391px) {
     .gif{
         position: absolute;
         bottom: 0!important;
