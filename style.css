@@ -81,7 +81,7 @@ body{
             height: 20vh;
         }
         .Hello, .Val, .Person, .WIll {
-            font-size: 1rem
+            font-size: 1rem!important
         }
 }
 #container {
