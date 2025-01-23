@@ -83,6 +83,9 @@ body{
         .Hello, .Val, .Person, .WIll {
             font-size: 1rem;
         }
+    .question{
+        margin-top:5%;
+    }
 }
 #container {
     position: absolute;
