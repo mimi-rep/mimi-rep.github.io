@@ -71,7 +71,7 @@ body{
     color:white;
 }
 
-@media (min-width:250px) and (max-width:700px) { {
+@media (min-width:250px) and (max-width:700px) {
     .gif{
         position: absolute;
         bottom: 0!important;
@@ -81,7 +81,7 @@ body{
             height: 20vh;
         }
         .Hello, .Val, .Person, .WIll {
-            font-size: 1rem!important
+            font-size: 1rem;
         }
 }
 #container {
