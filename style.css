@@ -1,0 +1,126 @@
+*{
+    padding: 0;
+    margin:0;
+}
+
+html{
+    width: 100vw;
+    height: 100vh;
+}
+body{
+    background: url(images.png);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    box-sizing: border-box;
+}
+
+.question{
+    text-align: center;
+    background-color: rgba(216, 112, 147,0.9);
+    width: 80vmin;
+    height: 60vmin;
+    border-radius: 10%;
+    box-sizing:border-box;
+    padding: 5%;
+    margin-top: 15%;
+}
+.hidden {
+    visibility: hidden;
+}
+.Hello, .Val, .Person, .WIll {
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 2rem;
+}
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    margin-top:10%;
+    font-size: 1.2rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.Yes{
+    height:10vmin;
+    width:20vmin;
+    background-color:rgb(237, 56, 177);
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+}
+#No{
+    height:10vmin;
+    width:20vmin;
+    background-color:rgb(237, 56, 177);
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+.gif{
+    position: absolute;
+    left:43%;
+}
+
+.gif img{
+    height:20vh;
+}
+
+.Yes:hover,#No:hover{
+    background-color: palevioletred;
+    color:white;
+}
+
+@media (min-width:300px) and (max-width:391px) {
+    .gif{
+        position: absolute;
+        bottom: 0!important;
+        left:22%;
+        }
+        .gif img{
+            height: 20vh;
+        }
+        .Hello, .Val, .Person, .WIll {
+            
+            font-size: 1rem;
+        }
+}
+#container {
+    position: absolute;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+  }
+
+  .slide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    pointer-events: none;
+  }
+
+  .slide img {
+    max-width: 80%;
+    max-height: 60vh;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .slide p {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    background-color: rgba(255, 255, 255, 0.829);
+    border-radius: 5%;
+    color: #333;
+  }
+
+  .slide.active {
+    opacity: 1;
+    pointer-events: all!important;
+  }

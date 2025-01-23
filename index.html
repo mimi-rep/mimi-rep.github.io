@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Baby!</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="container">
+        <div class="slide">
+          <img src="panda-with-a-bouquet-of-tulips-bear-illustration-for-print-postcard-or-sticker-vector.jpg" alt="Image 1">
+          <p>"Hello Jaanu"<br>"Here are some Tulips for My Girl"</p>
+        </div>
+        <div class="slide">
+          <img src="anime-anime-hug.gif" alt="Image 2">
+          <p>"A Virtual Hug Cause I Can't be there"</p>
+        </div>
+        <div class="slide">
+          <img src="anime.gif" alt="Image 3">
+          <p>"Me because I can't Hug you in person."</p>
+        </div>
+        <div class="slide">
+            <div class="question">
+                <span class="Hello hidden">Hello My Mimi!</span><br><br>
+                <span class="Val hidden">Baby, Valentine's is Approaching soon and I wanted to ask you something
+                    &#128537;</span><br><br>
+                <span class="Person hidden">Well I can't ask you in person but i suppose i could do this</span><br><br>
+                <span class="WIll hidden">My Love Will you be my Valentine<br> &#128073;&#128072;</span><br><br>
+            </div>
+            <div class="buttons">
+                <a href="flower.html"><button class="Yes" type="submit" >YESS</button></a>
+                <button id="No" onclick="moveButton">NOPE!</button>
+            </div>
+        </div>
+        <div class="gif hidden">
+            <img src="give-food.gif" alt="">
+        </div>
+    </div>
+    
+    <script>
+        const noButton = document.getElementById("No");
+        const yes = document.querySelector('.Yes')
+        function moveButton() {
+            var x = Math.random()*window.innerWidth
+            var y = Math.random()*window.innerHeight
+            noButton.style.position="absolute"
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+            console.log("CLICKED",x,y)
+        }
+
+        noButton.addEventListener("mouseover", moveButton);
+        noButton.addEventListener("click", moveButton);
+        const classes = [".Hello", ".Val", ".Person", ".WIll",".gif"];
+
+        function showTextByClassSequentially(classList, delay) {
+            classList.forEach((className, index) => {
+                setTimeout(() => {
+                    document.querySelector(className).classList.remove("hidden");
+                }, index * delay);
+            })
+        }
+
+        setTimeout(() => {
+            showTextByClassSequentially(classes, 2000); 
+        }, 9000);  
+        const slides = document.querySelectorAll('.slide');
+        let currentIndex = 0;
+
+
+        function cycleSlides() {
+        slides[currentIndex].classList.add('active');
+        setTimeout(() => {
+            slides[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1);
+            if(currentIndex != slides.length){cycleSlides();}
+            if(currentIndex == slides.length){slides[currentIndex-1].classList.add('active')}
+        }, 3000); // Change slide every 3 seconds
+        }
+
+    cycleSlides();
+    </script>
+</body>
+
+</html>
