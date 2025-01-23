@@ -9,7 +9,6 @@ html{
 }
 body{
     background: url(images.png);
-    background-size:contain;
     width: 100vw;
     height: 100vh;
     position: absolute;
@@ -72,7 +71,7 @@ body{
     color:white;
 }
 
-@media (min-width:200px) and (max-width:391px) {
+@media (min-width:250px) and (max-width:500px) {
     .gif{
         position: absolute;
         bottom: 0!important;
@@ -82,8 +81,7 @@ body{
             height: 20vh;
         }
         .Hello, .Val, .Person, .WIll {
-            
-            font-size: 1rem;
+            font-size: 0.5rem
         }
 }
 #container {
